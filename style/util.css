@@ -1,51 +1,51 @@
 .sr-only {
-	position: absolute;
-	width: 1px;
-	height: 1px;
-	padding: 0;
-	margin: -1px;
-	overflow: hidden;
-	clip: rect(0, 0, 0, 0);
-	white-space: nowrap;
-	border-width: 0;
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
 }
 
 .sl-hidden {
-	display: none;
+  display: none;
 }
 .sl-flex {
-	display: flex;
+  display: flex;
 }
 .sl-block {
-	display: block;
+  display: block;
 }
 @media (min-width: 50rem) {
-	.md\:sl-hidden {
-		display: none;
-	}
-	.md\:sl-flex {
-		display: flex;
-	}
-	.md\:sl-block {
-		display: block;
-	}
+  .md\:sl-hidden {
+    display: none;
+  }
+  .md\:sl-flex {
+    display: flex;
+  }
+  .md\:sl-block {
+    display: block;
+  }
 }
 @media (min-width: 72rem) {
-	.lg\:sl-hidden {
-		display: none;
-	}
-	.lg\:sl-flex {
-		display: flex;
-	}
-	.lg\:sl-block {
-		display: block;
-	}
+  .lg\:sl-hidden {
+    display: none;
+  }
+  .lg\:sl-flex {
+    display: flex;
+  }
+  .lg\:sl-block {
+    display: block;
+  }
 }
 [data-theme='light'] .light\:sl-hidden {
-	display: none;
+  display: none;
 }
 [data-theme='dark'] .dark\:sl-hidden {
-	display: none;
+  display: none;
 }
 
 /*
@@ -57,5 +57,27 @@ Primarily useful for things where we can’t rely on writing direction like icon
 In a LTR context: →					In a RTL context: ←
 */
 [dir='rtl'] .rtl\:flip:not(:where([dir='rtl'] [dir='ltr'] *)) {
-	transform: matrix(-1, 0, 0, 1, 0, 0);
+  transform: matrix(-1, 0, 0, 1, 0, 0);
+}
+
+.alias-container {
+  color: #808080;
+  font-size: 16px;
+}
+
+.badge {
+  display: inline-block;
+  padding: 5px 10px;
+  background-color: #007bff;
+  color: white;
+  border-radius: 10px;
+  font-size: 14px;
+  text-align: center;
+}
+
+.flex-container {
+  display: flex;
+  flex-wrap: wrap;
+  item-align: center;
+  justify-content: space-between;
 }
