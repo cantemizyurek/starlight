@@ -107,7 +107,9 @@ const pagefindEnabled =
 									<PageTitle {...Astro.props} />
 									{Astro.props.isFallback && <FallbackContentNotice {...Astro.props} />}
 									<div class="flex-container">
-										<Aliases {...Astro.props} />
+										<div>
+											<Aliases {...Astro.props} />
+										</div>
 										<Requires {...Astro.props} />
 									</div>
 								</ContentPanel>

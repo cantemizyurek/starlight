@@ -2,10 +2,23 @@
 const {requires} = Astro.props.entry.data
 
 const {privilege} = requires
+const {object} = requires
+
+const privilegeNumbers = {
+    root: 1,
+    user: 2,
+    guest: 3,
+    unknown: 4
+}
 ---
 
-{privilege !== 'unknown' && <a class="badge">
+<div>
+{privilege !== 'unknown' && <a class="badge"  href={`/reference/privileges/${privilegeNumbers[privilege]}-${privilege}`}>
     {
         privilege === 'root' ? 'Root' : `${privilege[0].toUpperCase()}${privilege.slice(1)} +`
     }
 </a>}
+{object !== 'unknown' && <a class="badge" href={`/reference/object-types/${object}`}>
+    {object}
+</a>}
+</div>
