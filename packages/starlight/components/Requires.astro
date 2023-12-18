@@ -1,0 +1,11 @@
+---
+const {requires} = Astro.props.entry.data
+
+const {privilege} = requires
+---
+
+{privilege !== 'unknown' && <a class="badge">
+    {
+        privilege === 'admin' ? 'Admin' : `${privilege[0].toUpperCase()}${privilege.slice(1)} +`
+    }
+</a>}

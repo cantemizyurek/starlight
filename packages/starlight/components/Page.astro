@@ -7,6 +7,9 @@ import '../style/reset.css';
 import '../style/shiki.css';
 import '../style/util.css';
 
+import Aliases from './Aliases.astro';
+import Requires from './Requires.astro';
+
 // Components — can override built-in CSS, but not user CSS.
 import {
 	Banner,
@@ -103,6 +106,10 @@ const pagefindEnabled =
 								<ContentPanel {...Astro.props}>
 									<PageTitle {...Astro.props} />
 									{Astro.props.isFallback && <FallbackContentNotice {...Astro.props} />}
+									<div class="flex-container">
+										<Aliases {...Astro.props} />
+										<Requires {...Astro.props} />
+									</div>
 								</ContentPanel>
 								<ContentPanel {...Astro.props}>
 									<MarkdownContent {...Astro.props}>
