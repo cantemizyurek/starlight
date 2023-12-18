@@ -1,0 +1,9 @@
+---
+const {alias} = Astro.props.entry.data
+---
+
+{
+    alias.length > 0 && (<div class="alias-container">
+        aliases: {alias.join(', ')}
+    </div>)
+}

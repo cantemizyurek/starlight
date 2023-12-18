@@ -1,0 +1,23 @@
+---
+const {requires} = Astro.props.entry.data
+
+const {privileges} = requires
+
+console.log(privileges)
+
+function getMinPrivilige() {
+    if (privileges.guest) {
+        return 'guest'
+    } else if (privileges.user) {
+        return 'user'
+    } else if (privileges.admin) {
+        return 'admin'
+    } else {
+        return 'unknown'
+    }
+}
+---
+
+<a class="badge">
+    {getMinPrivilige() === 'admin' ? 'Admin' : getMinPrivilige() + ' +'}
+</a>
