@@ -19,6 +19,8 @@ const privilegeNumbers = {
     }
 </a>}
 {object !== 'unknown' && <a class="badge" href={`/reference/object-types/${object}`}>
-    {object}
+    {
+        object === 'shell' ? 'Shell' : `${object[0].toUpperCase()}${object.slice(1)} +`
+    }
 </a>}
 </div>
