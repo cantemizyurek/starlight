@@ -6,6 +6,6 @@ const {privilege} = requires
 
 {privilege !== 'unknown' && <a class="badge">
     {
-        privilege === 'admin' ? 'Admin' : `${privilege[0].toUpperCase()}${privilege.slice(1)} +`
+        privilege === 'root' ? 'Root' : `${privilege[0].toUpperCase()}${privilege.slice(1)} +`
     }
 </a>}
